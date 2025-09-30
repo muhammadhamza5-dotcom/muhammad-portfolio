@@ -1,0 +1,66 @@
+<!-- Document setup for the About page:
+  - The HTML5 doctype declaration and language attribute for english
+  - The meta tags for character encoding and responsive design
+  - Links to four separate CSS stylesheets:
+      -global.css (shared styles across all pages)
+      -mobile.css (styles for screens up to 600px)(for mobile devices)
+      -tablet.css (styles for screens 601px–1024px) (for tablets)
+      -laptop.css (styles for screens 1025px and above) (for laptops/desktops)
+  - Sets the page title shown in the browser tab
+-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 601px) and (max-width:1024px)">
+    <link rel="stylesheet" href="css/laptop.css" media="(min-width: 1025px)">
+    <title>About - MUHAMMAD HAMZA</title>
+</head>
+<body>
+    <!-- Same Header as the index-->
+    <header class="site-header">
+        <div class="container">
+            <h1 class="site-title">MUHAMMAD HAMZA</h1>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html" aria-current="page">ABOUT ME</a></li>
+                    <li><a href="projects.html">PROJECTS</a></li>
+                    <li><a href="contact.html">CONTACT ME</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!--Main content: page-specific -->
+<main class="container">
+    <!-- Second Heading and introduction about myself -->
+    <h2>About Me</h2>
+    <img src="images/Muhammad_HamzaPic.jpeg" alt="Photo of Muhammad Hamza" width="240" height="240">
+
+    <p>Hello, I'm Muhammad Hamza, currently a Networking and IT Security student at Ontario Tech University. My interests within the program is cybersecurity, computer networking, and web development. What I enjoy is taking what I learn and applying it to the real-world.</p>
+    <p>Outside of school, I'm also interested in Cybercrime Investigator and Ethical Hackers, as fars as career.</p>
+
+    <h3>My Introduction Video</h3>
+    <!-- Embedded video with posterimage and controls -->
+    <video controls poster="images/Poster_Pic.jpeg" width="600">
+        <source src="video/Muhammad_HamzaVid.mp4" type="video/mp4">
+        <!-- Fallback message if the browser deasn't support video -->
+        Sorry, your browser does not support video playback.
+    </video>
+</main>
+
+<!-- Footer: same across all pages -->
+ <footer class="site-footer">
+    <div class="container">
+        <p>© <span id="year"></span> MUHAMMAD HAMZA •
+        <a href="mailto:muhammad.hamza5@ontariotechu.net">muhammad.hamza5@ontariotechu.net</a></p>
+    </div>
+ </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

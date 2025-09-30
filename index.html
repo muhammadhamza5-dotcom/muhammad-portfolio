@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Document setup for the Index page:
+      - The HTML5 doctype declaration and language attribute for English
+      - Meta tags for character encoding (UTF-8) and responsive design
+      - Links to four separate CSS stylesheets:
+          * global.css (shared styles across all pages)
+          * mobile.css (styles for screens up to 600px → mobile devices)
+          * tablet.css (styles for screens 601px–1024px → tablets)
+          * laptop.css (styles for screens 1025px and above → laptops/desktops)
+      - Sets the page title shown in the browser tab
+    -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 600px)">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 601px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="css/laptop.css" media="(min-width: 1025px)">
+    <title>Home - MUHAMMAD HAMZA</title>
+</head>
+<body>
+  
+  <!-- Site header with navigation -->
+  <header class="site-header">
+    <!-- Container centers and limits width of the content -->
+    <div class="container">
+        <!-- Main site title (your name) -->
+        <h1 class="site-title">MUHAMMAD HAMZA</h1>
+        <!-- Navigation bar with links to all site pages -->
+        <nav aria-label="Main Navigation">
+            <ul class="nav-list">
+                <!-- "aria-current=page" marks Home as the current page -->
+                <li><a href="index.html" aria-current="page">HOME</a></li>
+                <li><a href="about.html">ABOUT ME</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="contact.html">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </div>
+  </header>    
+
+  <!-- Main content area of the Home Page -->
+  <main class="container">
+    <!-- Article block groups related content together -->
+    <article>
+        <!-- Secondary heading welcoming visitors -->
+        <h2>Welcome to my Website</h2>
+        <!-- Short introduction paragraph about yourself -->
+        <p>
+          Hello, I'm <strong>MUHAMMAD HAMZA</strong>, 
+          a student at Ontario Tech University studying Networking and IT Security. 
+          Explore my projects, learn about me, and get in touch.
+        </p>
+        <p>Feel free to contact me anytime. Thank you for visiting my website!</p>
+        <!-- Call-to-action button that links to the Projects page -->
+        <a class="cta" href="projects.html">See My Work</a>
+    </article>
+  </main>
+
+  <!-- Site footer with copyright and contact info -->
+  <footer class="site-footer">
+      <div class="container">
+          <p>© <span id="year"></span> MUHAMMAD HAMZA • 
+          <a href="mailto:muhammad.hamza5@ontariotechu.net">muhammad.hamza5@ontariotechu.net</a></p>
+      </div>
+  </footer>  
+
+  <!-- Script to update the year automatically -->
+  <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
